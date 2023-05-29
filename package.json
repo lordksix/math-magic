@@ -15,6 +15,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "lint": "npx eslint **/*.{js,jsx} --fix && npx stylelint **/*.{css,scss}",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
