@@ -13,17 +13,15 @@ jobs:
     name: build and deploy
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          node-version: "18.x"
-      - name: Setup App
-        run: npm install
-      - name: Build App
-        run: npm run build
-      - name: Test App
-        run: npm test
-      - name: Deploy
-        run: gh-pages -d build
+          folder: build # The folder the action should deploy.
