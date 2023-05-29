@@ -46,6 +46,8 @@
     <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">JavaScript</a></li>
   </ul>
   <summary>Framework</summary>
+</details>
+<details>
   <ul>
     <li><a href="https://react.dev/">React</a></li>
   </ul>
@@ -208,6 +210,5 @@ I would like to thank Microverse for the template for this project.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
