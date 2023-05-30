@@ -8,14 +8,14 @@
   display: flex;
   flex-flow: column;
   max-width: 400px;
+  border: 0.5px solid black;
 }
 
 .screen-calc {
   text-align: right;
-  padding-inline: 30px;
+  padding: 10px 0;
   background-color: rgb(101, 101, 101);
   color: white;
-  padding-block: 10px;
   font-size: 1.15rem;
 }
 
@@ -31,8 +31,24 @@
 .keybtn {
   text-align: center;
   vertical-align: middle;
-  padding-block: 5px;
-  padding-inline: 10px;
+  padding: 7px 10px;
+  border: 0.5px solid burlywood;
+}
+
+.keyrow:nth-child(2) .keybtn {
+  border-top: none;
+}
+
+.keyrow .keybtn:first-child {
+  border-left: none;
+}
+
+.keyrow .keybtn:last-child {
+  border-right: none;
+}
+
+.keyrow:last-child .keybtn {
+  border-bottom: none;
 }
 
 .number {
