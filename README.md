@@ -56,6 +56,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Setup React App**
+- ** Implemente static React Calculator**
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -175,7 +176,7 @@ Go to [🚀 Live Demo](#live-demo) to check it out.
 ## 🔭 Future Features <a name="future-features"></a>
 
 Future changes:
-- Implement App
+- Add states and evetns to calculator
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
