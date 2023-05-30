@@ -13,7 +13,12 @@ const KeyRow = (props) => {
 };
 
 KeyRow.propTypes = {
-  buttons: PropTypes.arrayOf.isRequired,
+  buttons: PropTypes.arrayOf(PropTypes.shape({
+    category: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    row: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+  })).isRequired,
 };
 
 export default KeyRow;
