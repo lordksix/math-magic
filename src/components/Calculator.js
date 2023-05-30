@@ -1,6 +1,6 @@
 const Calculator = ({ buttons }) => {
   return (
-    <div>
+    <div className="calculator-wrapper">
       <Result />
       <Keypad buttons= {buttons}/>
     </div>,
