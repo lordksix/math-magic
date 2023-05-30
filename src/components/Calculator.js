@@ -1,9 +1,12 @@
-const Calculator = ({ buttons }) => {
+import ResultScreen from './ResultScreen';
+
+const Calculator = (props) => {
+  const { buttons } = props;
   return (
     <div className="calculator-wrapper">
-      <Result />
-      <Keypad buttons= {buttons}/>
-    </div>,
+      <ResultScreen />
+      <Keypad buttons={buttons} />
+    </div>
   );
 };
 
