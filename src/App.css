@@ -1,39 +1,60 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-flow: column;
+  max-width: 400px;
+  border: 0.5px solid black;
+}
+
+.screen-calc {
+  text-align: right;
+  padding: 10px 0;
+  background-color: rgb(101, 101, 101);
   color: white;
+  font-size: 1.15rem;
 }
 
-.App-link {
-  color: #61dafb;
+.keyrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.double {
+  grid-column: 1 / span 2;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.keybtn {
+  text-align: center;
+  vertical-align: middle;
+  padding: 7px 10px;
+  border: 0.5px solid burlywood;
+}
+
+.keyrow:nth-child(2) .keybtn {
+  border-top: none;
+}
+
+.keyrow .keybtn:first-child {
+  border-left: none;
+}
+
+.keyrow .keybtn:last-child {
+  border-right: none;
+}
+
+.keyrow:last-child .keybtn {
+  border-bottom: none;
+}
+
+.number {
+  background-color: lightgray;
+}
+
+.operation {
+  background-color: orange;
 }
