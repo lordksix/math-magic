@@ -25,7 +25,4 @@ jobs:
           npm run build
 
       - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: . # The folder the action should deploy.
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy
