@@ -1,13 +1,12 @@
-import PropTypes from 'prop-types';
 import KeyRow from './KeyRow';
+import BUTTONS from './keypadButtons';
 
-const Keypad = (props) => {
-  const { keypad } = props;
-  const buttons1 = keypad.filter(keypad.row === 1);
-  const buttons2 = keypad.filter(keypad.row === 2);
-  const buttons3 = keypad.filter(keypad.row === 3);
-  const buttons4 = keypad.filter(keypad.row === 4);
-  const buttons5 = keypad.filter(keypad.row === 5);
+const Keypad = () => {
+  const buttons1 = BUTTONS.filter((key) => key.row === 1);
+  const buttons2 = BUTTONS.filter((key) => key.row === 2);
+  const buttons3 = BUTTONS.filter((key) => key.row === 3);
+  const buttons4 = BUTTONS.filter((key) => key.row === 4);
+  const buttons5 = BUTTONS.filter((key) => key.row === 5);
   const buttonrows = [
     buttons1, buttons2, buttons3, buttons4, buttons5,
   ];
@@ -16,10 +15,6 @@ const Keypad = (props) => {
   ));
 
   return <>{keypadRows}</>;
-};
-
-Keypad.propTypes = {
-  keypad: PropTypes.arrayOf.isRequired,
 };
 
 export default Keypad;

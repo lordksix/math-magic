@@ -3,3 +3,42 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.calculator-wrapper {
+  display: flex;
+  flex-flow: column;
+  max-width: 400px;
+}
+
+.screen-calc {
+  text-align: right;
+  padding-inline: 30px;
+  background-color: rgb(101, 101, 101);
+  color: white;
+  padding-block: 10px;
+  font-size: 1.15rem;
+}
+
+.keyrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.double {
+  grid-column: 1 / span 2;
+}
+
+.keybtn {
+  text-align: center;
+  vertical-align: middle;
+  padding-block: 5px;
+  padding-inline: 10px;
+}
+
+.number {
+  background-color: lightgray;
+}
+
+.operation {
+  background-color: orange;
+}
