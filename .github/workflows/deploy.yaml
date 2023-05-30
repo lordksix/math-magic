@@ -25,8 +25,8 @@ jobs:
           npm run build
 
       - name: Deploy 🚀
-        run: |
-          git config --global user.email "your_github_email>"
-          git config --global user.name "your_github_username>"
-          git remote set-url origin https://your_personal_access_token>@github.com/your_github_username>/your_repo>.git
-          npm run deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
+        env:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
