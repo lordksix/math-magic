@@ -11,7 +11,12 @@ const KeyBtn = (props) => {
 };
 
 KeyBtn.propTypes = {
-  button: PropTypes.objectOf.isRequired,
+  button: PropTypes.shape({
+    category: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    row: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default KeyBtn;
