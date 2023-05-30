@@ -27,6 +27,5 @@ jobs:
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: . # The folder the action should deploy.
-        env:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: . # The folder the action should deploy.
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
