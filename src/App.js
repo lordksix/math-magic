@@ -1,7 +1,7 @@
 import Calculator from './components/Calculator';
 import './App.css';
 
-const BUTTONS = [
+const KEYPAD = [
   {
     category: 'number', value: 0, row: 5, column: 0, id: 0,
   },
@@ -65,7 +65,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" />
-      <Calculator buttons={BUTTONS} />
+      <Calculator keypad={KEYPAD} />
     </div>
   );
 }

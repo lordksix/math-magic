@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
 import ResultScreen from './ResultScreen';
+import Keypad from './Keypad';
 
 const Calculator = (props) => {
-  const { buttons } = props;
+  const { keypad } = props;
   return (
     <div className="calculator-wrapper">
       <ResultScreen />
-      <Keypad buttons={buttons} />
+      <Keypad keypad={keypad} />
     </div>
   );
 };
 
 Calculator.propTypes = {
-  buttons: PropTypes.arrayOf.isRequired,
+  keypad: PropTypes.arrayOf.isRequired,
 };
 
 export default Calculator;
