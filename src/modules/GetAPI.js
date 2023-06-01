@@ -4,8 +4,14 @@
  * @param {string} url - URL to GET data to
  * @return {Object} - Response body from URL that was GETed
  */
-const fetchDataJSON = async (URL) => {
-  const response = await fetch(URL);
+const fetchDataJSON = async (URL, authObj = false) => {
+  const myHeaders = new Headers();
+  if (authObj) myHeaders.append(authObj.name, authObj.value);
+  const fetchOptions = {
+    method: 'GET',
+    headers: myHeaders,
+  };
+  const response = await fetch(URL, fetchOptions);
   if (!response.ok) {
     const errorMessage = await response.text();
     throw new Error(errorMessage);
@@ -15,13 +21,13 @@ const fetchDataJSON = async (URL) => {
 };
 
 /**
- * Event handler for a form submit event.
+ * Event handler for a event influence fetch get api.
  * @param {SubmitEvent} event
  */
-const handleGETAPIevent = async (event, url) => {
+const handleGETAPIevent = async (event, url, apiKey = false) => {
   event.preventDefault();
   try {
-    const responseData = await fetchDataJSON(url);
+    const responseData = await fetchDataJSON(url, apiKey);
     return responseData;
   } catch (error) {
     return error;
@@ -29,11 +35,11 @@ const handleGETAPIevent = async (event, url) => {
 };
 
 /**
- * Event handler for a form submit event.
+ * Event handler for a fetch get api.
  */
-const handleGETAPI = async (url) => {
+const handleGETAPI = async (url, apiKey = false) => {
   try {
-    const responseData = await fetchDataJSON(url);
+    const responseData = await fetchDataJSON(url, apiKey);
     return responseData;
   } catch (error) {
     return error;
