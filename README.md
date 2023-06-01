@@ -58,6 +58,7 @@
 - **Setup React App**
 - **Implemente static React Calculator**
 - **Add Calculator Logic**
+- **Add API Interactivity**
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -75,6 +76,7 @@ to the project NPM and Node.js must be installed.
 
 In order to run this project you need:
 To clone or fork and run it in a browser
+API key for API Ninja
 
 ### Setup
 
@@ -93,6 +95,13 @@ For more information on how to clone or fork a repository:
 
 If you want to make any kind of change or modification, Node.Js and NPM is necesary. For more information on how to install node.js and npm:
 - <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Downloading and installing Node.js and npm</a>
+
+Setup enviorement secrets
+
+```sh
+  echo .env
+```
+In this file you should add you API key for the API Ninjas website. Name of the secret should be **REACT_APP_API_NINJA**.
 
 ### Install
 
@@ -177,7 +186,7 @@ Go to [🚀 Live Demo](#live-demo) to check it out.
 ## 🔭 Future Features <a name="future-features"></a>
 
 Future changes:
-- Add API interactivity
+- Add Tests
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
