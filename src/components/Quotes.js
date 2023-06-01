@@ -37,7 +37,7 @@ const Calculator = () => {
         <p>Loading...</p>
       </div>
     );
-  };
+  }
   return (
     <div className={`quotes-wrapper ${hasError ? 'error' : ''}`}>
       {data.map((item) => (
