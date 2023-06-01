@@ -14,19 +14,26 @@ const error = {
 
 const Calculator = () => {
   const [data, setData] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasError, setHasError] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true);
       let res = await handleGETAPI(url, key);
-      if (res instanceof Error) res = [error];
+      if (res instanceof Error) {
+        setHasError(true);
+        res = [error];
+      }
       const newRes = res.map((item) => ({ ...item, id: crypto.randomUUID().toString() }));
       setData(newRes);
+      setIsLoading(false);
     };
     fetchData();
-  }, [setData]);
+  }, [setData, setIsLoading]);
 
+  if (isLoading) return <div className="quotes-wrapper">Loading...</div>;
   return (
-    <div className="quotes-wrapper">
+    <div className={`quotes-wrapper ${hasError ? 'error' : ''}`}>
       {data.map((item) => (
         <>
           <p key={item.id}>
