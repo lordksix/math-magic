@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { handleGETAPI } from '../modules/GetAPI';
+import SigleQuote from './SingleQuote';
 
 const url = 'https://api.api-ninjas.com/v1/quotes?category=intelligence&limit=1';
 const key = {
@@ -38,15 +39,23 @@ const Calculator = () => {
       </div>
     );
   }
+  if (hasError) {
+    return (
+      <div className="quotes-wrapper error">
+        <p>Unable to fetch date</p>
+        {data.map((item) => (
+          <>
+            <SigleQuote itemKey={item.id} itemQuote={item.quote} itemAuthor={item.author} />
+          </>
+        ))}
+      </div>
+    );
+  }
   return (
-    <div className={`quotes-wrapper ${hasError ? 'error' : ''}`}>
+    <div className="quotes-wrapper">
       {data.map((item) => (
         <>
-          <p key={item.id}>
-            {item.quote}
-            <br />
-            {`- ${item.author}`}
-          </p>
+          <SigleQuote itemKey={item.id} itemQuote={item.quote} itemAuthor={item.author} />
         </>
       ))}
     </div>
