@@ -31,7 +31,13 @@ const Calculator = () => {
     fetchData();
   }, [setData, setIsLoading]);
 
-  if (isLoading) return <div className="quotes-wrapper">Loading...</div>;
+  if (isLoading) {
+    return (
+      <div className="quotes-wrapper">
+        <p>Loading...</p>
+      </div>
+    );
+  };
   return (
     <div className={`quotes-wrapper ${hasError ? 'error' : ''}`}>
       {data.map((item) => (
