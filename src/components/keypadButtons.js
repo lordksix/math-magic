@@ -45,7 +45,7 @@ const KEYPAD = [
     category: 'number', value: '=', row: 5, id: 14,
   },
   {
-    category: 'number', value: '±', row: 1, id: 15,
+    category: 'number', value: '+/-', row: 1, id: 15,
   },
   {
     category: 'number', value: '%', row: 1, id: 16,
