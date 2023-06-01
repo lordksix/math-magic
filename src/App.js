@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Math Magicians&apos; Calculator
+        Math Magicians&apos; Website
       </header>
       <main className="app-body">
         <Quotes />
