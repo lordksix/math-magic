@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+.app-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Calculator */
+
 .calculator-wrapper {
   display: flex;
   flex-flow: column;
@@ -57,4 +66,10 @@
 
 .operation {
   background-color: orange;
+}
+
+/* Calculator */
+
+.quotes-wrapper {
+  max-width: 400px;
 }

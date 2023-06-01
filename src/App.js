@@ -1,4 +1,5 @@
 import Calculator from './components/Calculator';
+import Quotes from './components/Quotes';
 import './App.css';
 
 function App() {
@@ -7,7 +8,10 @@ function App() {
       <header className="App-header">
         Math Magicians&apos; Calculator
       </header>
-      <Calculator />
+      <main className="app-body">
+        <Quotes />
+        <Calculator />
+      </main>
     </div>
   );
 }
