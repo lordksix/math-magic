@@ -30,13 +30,13 @@ const KEYPAD = [
     category: 'number', value: '9', row: 2, id: 9,
   },
   {
-    category: 'operation', value: '*', row: 2, id: 10,
+    category: 'operation', value: 'x', row: 2, id: 10,
   },
   {
     category: 'operation', value: '+', row: 4, id: 11,
   },
   {
-    category: 'number', value: '/', row: 1, id: 12,
+    category: 'number', value: '÷', row: 1, id: 12,
   },
   {
     category: 'operation', value: '-', row: 3, id: 13,
