@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import calculate from '../logic/calculate';
+import calculate from 'logic/calculate';
 
 const KeyBtn = (props) => {
   const { button, onClickSetCalculation, calculation } = props;

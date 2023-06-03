@@ -4,12 +4,13 @@
  * @param {string} url - URL to GET data to
  * @return {Object} - Response body from URL that was GETed
  */
-const fetchDataJSON = async (URL, authObj = false) => {
-  const myHeaders = new Headers();
-  if (authObj) myHeaders.append(authObj.name, authObj.value);
+const fetchDataJSON = async (URL, authObj = false, signal = undefined) => {
+  const headers = new Headers();
+  if (authObj) headers.append(authObj.name, authObj.value);
   const fetchOptions = {
     method: 'GET',
-    headers: myHeaders,
+    headers,
+    signal,
   };
   const response = await fetch(URL, fetchOptions);
   if (!response.ok) {
@@ -24,10 +25,10 @@ const fetchDataJSON = async (URL, authObj = false) => {
  * Event handler for a event influence fetch get api.
  * @param {SubmitEvent} event
  */
-const handleGETAPIevent = async (event, url, apiKey = false) => {
+const handleGETAPIevent = async (event, url, apiKey = false, signal = undefined) => {
   event.preventDefault();
   try {
-    const responseData = await fetchDataJSON(url, apiKey);
+    const responseData = await fetchDataJSON(url, apiKey, signal);
     return responseData;
   } catch (error) {
     return error;
@@ -37,9 +38,9 @@ const handleGETAPIevent = async (event, url, apiKey = false) => {
 /**
  * Event handler for a fetch get api.
  */
-const handleGETAPI = async (url, apiKey = false) => {
+const handleGETAPI = async (url, apiKey = false, signal = undefined) => {
   try {
-    const responseData = await fetchDataJSON(url, apiKey);
+    const responseData = await fetchDataJSON(url, apiKey, signal);
     return responseData;
   } catch (error) {
     return error;

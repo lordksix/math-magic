@@ -5,19 +5,24 @@
 }
 
 .App {
-  width: 90vw;
-  max-width: 900px;
   display: flex;
   flex-flow: column;
-  align-items: center;
   gap: 10px;
+}
+
+.App-header {
+  width: 90vw;
+  max-width: 620px;
+  text-align: center;
 }
 
 .app-body {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  flex-flow: column;
+  align-items: center;
   gap: 20px;
+  width: 90vw;
+  max-width: 620px;
 }
 
 /* Calculator */
@@ -25,7 +30,8 @@
 .calculator-wrapper {
   display: grid;
   grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
-  max-width: 400px;
+  min-width: 150px;
+  max-width: 300px;
   border: 0.5px solid black;
 }
 
@@ -77,14 +83,26 @@
   background-color: orange;
 }
 
-/* Calculator */
+/* quotes */
 
 .quotes-wrapper {
-  width: 40%;
-  max-width: 400px;
+  min-width: 150px;
+  max-width: 300px;
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
 }
 
 .error {
   color: red;
+}
+
+@media only  screen and (min-width: 420px) {
+  .app-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    column-gap: 20px;
+  }
 }
