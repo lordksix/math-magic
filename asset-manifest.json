@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/math-magic/static/css/main.a9f33bb2.css",
-    "main.js": "/math-magic/static/js/main.ba5323eb.js",
+    "main.css": "/math-magic/static/css/main.f3fbab93.css",
+    "main.js": "/math-magic/static/js/main.9760500d.js",
+    "static/js/410.f3169e86.chunk.js": "/math-magic/static/js/410.f3169e86.chunk.js",
     "static/js/787.a00d512a.chunk.js": "/math-magic/static/js/787.a00d512a.chunk.js",
     "index.html": "/math-magic/index.html",
-    "main.a9f33bb2.css.map": "/math-magic/static/css/main.a9f33bb2.css.map",
-    "main.ba5323eb.js.map": "/math-magic/static/js/main.ba5323eb.js.map",
+    "main.f3fbab93.css.map": "/math-magic/static/css/main.f3fbab93.css.map",
+    "main.9760500d.js.map": "/math-magic/static/js/main.9760500d.js.map",
+    "410.f3169e86.chunk.js.map": "/math-magic/static/js/410.f3169e86.chunk.js.map",
     "787.a00d512a.chunk.js.map": "/math-magic/static/js/787.a00d512a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9f33bb2.css",
-    "static/js/main.ba5323eb.js"
+    "static/css/main.f3fbab93.css",
+    "static/js/main.9760500d.js"
   ]
 }
