@@ -62,7 +62,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can find a live demo in [HERE](https://lordksix.github.io/math-magic/).
+You can find a live demo in [HERE](https://math-magic-lordksix.vercel.app/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
