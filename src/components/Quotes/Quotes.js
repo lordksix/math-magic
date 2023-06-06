@@ -29,7 +29,7 @@ const fetchData = async (url, key, signal, controller, cb) => {
   };
 };
 
-const Calculator = () => {
+const Quotes = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     const controller = new AbortController();
@@ -47,4 +47,4 @@ const Calculator = () => {
   );
 };
 
-export default Calculator;
+export default Quotes;
