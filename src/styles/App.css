@@ -27,6 +27,10 @@ li {
   flex-wrap: wrap;
 }
 
+.navbar a {
+  text-decoration: none;
+}
+
 .appHeader,
 .appBody,
 .home {
@@ -40,6 +44,10 @@ li {
 
 .top {
   align-self: flex-start;
+}
+
+.active {
+  color: red;
 }
 
 /* Calculator */
