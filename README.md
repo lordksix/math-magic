@@ -56,7 +56,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Setup React App**
-- **Implemente static React Calculator**
+- **Implemente React Router Calculator**
 - **Add Calculator Logic**
 - **Add API Interactivity**
 
