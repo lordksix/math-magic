@@ -1,18 +1,24 @@
-import CalculatorApp from 'components/Calculator/CalculatorApp';
-import QuotesApp from 'components/Quotes/QuotesApp';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import 'styles/App.scss';
+import Layout from 'components/Layout';
+import Home from 'routes/Home';
+import Calculator from 'routes/Calculator';
+import Quotes from 'routes/Quotes';
+import NotMatch from 'routes/NotMatch';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Math Magicians&apos; Website
-      </header>
-      <main className="app-body">
-        <QuotesApp />
-        <CalculatorApp />
-      </main>
-    </div>
+    <main className="App">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="calculator" element={<Calculator />} />
+          <Route path="quotes" element={<Quotes />} />
+          <Route path="*" element={<NotMatch />} />
+        </Route>
+      </Routes>
+    </main>
   );
 }
 

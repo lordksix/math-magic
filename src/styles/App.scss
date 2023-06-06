@@ -4,25 +4,42 @@
   box-sizing: border-box;
 }
 
+ul,
+li {
+  list-style-type: none;
+}
+
 .App {
   display: flex;
   flex-flow: column;
   gap: 10px;
+  padding: 1vh 1vw;
 }
 
-.App-header {
-  width: 90vw;
-  max-width: 620px;
-  text-align: center;
+.navbar {
+  display: flex;
+  align-items: center;
 }
 
-.app-body {
+.navbar ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.appHeader,
+.appBody,
+.home {
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 20px;
   width: 90vw;
   max-width: 620px;
+}
+
+.top {
+  align-self: flex-start;
 }
 
 /* Calculator */
@@ -86,8 +103,7 @@
 /* quotes */
 
 .quotes-wrapper {
-  min-width: 150px;
-  max-width: 300px;
+  width: 90%;
   text-align: center;
   display: flex;
   flex-flow: column;
@@ -99,7 +115,12 @@
 }
 
 @media only  screen and (min-width: 420px) {
-  .app-body {
+  .appHeader {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .appBody {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;

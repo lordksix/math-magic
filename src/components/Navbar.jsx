@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const links = [
   { path: '/', text: 'Home' },
   { path: 'calculator', text: 'Calculator' },
-  { path: 'quote', text: 'Quote' },
+  { path: 'quotes', text: 'Quotes' },
 ];
 
 const Navbar = () => (

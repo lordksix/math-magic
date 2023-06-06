@@ -1,6 +1,6 @@
 const Home = () => (
-  <>
-    <h2>Welcome to our page</h2>
+  <div className="home">
+    <h2 className="top">Welcome to our page</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Voluptas ab id repellendus, labore veniam fugit recusandae
@@ -13,7 +13,7 @@ const Home = () => (
       porro non reprehenderit, maiores quos? Ipsam, minus voluptates
       eaque esse earum recusandae voluptatem quia!
     </p>
-  </>
+  </div>
 );
 
 export default Home;

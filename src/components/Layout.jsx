@@ -3,7 +3,7 @@ import Navbar from 'components/Navbar';
 
 const Layout = () => (
   <>
-    <header className="headerWrapper">
+    <header className="appHeader">
       <h1>Math Magicians</h1>
       <Navbar />
     </header>
