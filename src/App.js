@@ -1,5 +1,5 @@
-import Calculator from 'components/Calculator/Calculator';
-import Quotes from 'components/Quotes/Quotes';
+import CalculatorApp from 'components/Calculator/CalculatorApp';
+import QuotesApp from 'components/Quotes/QuotesApp';
 import './App.css';
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
         Math Magicians&apos; Website
       </header>
       <main className="app-body">
-        <Quotes />
-        <Calculator />
+        <QuotesApp />
+        <CalculatorApp />
       </main>
     </div>
   );

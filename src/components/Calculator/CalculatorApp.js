@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ResultScreen from './ResultScreen';
 import Keypad from './Keypad';
 
-const Calculator = () => {
+const CalculatorApp = () => {
   const [calculation, setCalculation] = useState({
     total: null,
     next: null,
@@ -17,4 +17,4 @@ const Calculator = () => {
   );
 };
 
-export default Calculator;
+export default CalculatorApp;

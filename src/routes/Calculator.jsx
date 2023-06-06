@@ -1,10 +1,10 @@
-import Calculator from 'components/Calculator/Calculator';
+import CalculatorApp from 'components/Calculator/CalculatorApp';
 
-const CalculatorPage = () => (
+const Calculator = () => (
   <>
     <h2>Let&apos;s do some Math</h2>
     <Calculator />
   </>
 );
 
-export default CalculatorPage;
+export default Calculator;
