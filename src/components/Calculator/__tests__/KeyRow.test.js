@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import KeyRow from '../KeyRow';
 import KEYPAD from '../keypadButtons';
 
-describe('should render key button', () => {
+describe('should render key rows', () => {
   const calculation = { total: null, next: null, operation: null };
   const setCalculation = () => console.log('test');
 

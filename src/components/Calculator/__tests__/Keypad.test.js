@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Keypad from '../Keypad';
 
-describe('should render key button', () => {
+describe('should render keypad', () => {
   const calculation = { total: null, next: null, operation: null };
   const setCalculation = () => console.log('test');
 
