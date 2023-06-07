@@ -7,7 +7,7 @@ const SingleQuote = (props) => {
     <p key={itemKey}>
       {itemQuote}
       <br />
-      {`- ${itemAuthor}`}
+      {`- by ${itemAuthor}`}
     </p>
   );
 };
