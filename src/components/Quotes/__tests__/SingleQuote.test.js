@@ -19,4 +19,11 @@ describe('should render Quote correctly', () => {
 
     expect(headingElement).toBeInTheDocument();
   });
+
+  test('should render one quote', () => {
+    render(<SingleQuote itemKey={itemKey} itemQuote={itemQuote} itemAuthor={itemAuthor} />);
+    const headingElement = screen.getAllByText(/Once/i);
+
+    expect(headingElement.length).toBe(1);
+  });
 });
