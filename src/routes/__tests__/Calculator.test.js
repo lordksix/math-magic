@@ -3,6 +3,6 @@ import Calculator from 'routes/Calculator';
 
 test('Should render heading', async () => {
   render(<Calculator />);
-  const headingElement = screen.getByText(/some Math/i);
+  const headingElement = screen.getByRole('heading', { name: /some Math/i });
   expect(headingElement).toBeInTheDocument();
 });
