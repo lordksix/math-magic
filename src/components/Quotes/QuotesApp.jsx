@@ -39,7 +39,6 @@ const QuotesApp = () => {
 
   return (
     <div className="quotes-wrapper">
-      <p>Amazing quote</p>
       <Suspense fallback={<Loading />}>
         <QuoteList data={data} />
       </Suspense>
