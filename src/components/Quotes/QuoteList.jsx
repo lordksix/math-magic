@@ -4,15 +4,14 @@ import SingleQuote from './SingleQuote';
 
 const QuoteList = (props) => {
   const { data } = props;
+  const dataList = data.map((item) => (
+    <SingleQuote key={uuidv4()} itemQuote={item.quote} itemAuthor={item.author} />
+  ));
 
   return (
     <>
       {data[0]?.category.includes('Error') ? <><p>Unable to fetch date</p></> : <></>}
-      {data.map((item) => (
-        <>
-          <SingleQuote itemKey={uuidv4()} itemQuote={item.quote} itemAuthor={item.author} />
-        </>
-      ))}
+      {dataList}
     </>
   );
 };

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
 const SingleQuote = (props) => {
-  const { itemKey, itemQuote, itemAuthor } = props;
+  const { itemQuote, itemAuthor } = props;
 
   return (
-    <p key={itemKey}>
+    <p>
       {itemQuote}
       <br />
       {`- by ${itemAuthor}`}
@@ -13,7 +13,6 @@ const SingleQuote = (props) => {
 };
 
 SingleQuote.propTypes = {
-  itemKey: PropTypes.string.isRequired,
   itemQuote: PropTypes.string.isRequired,
   itemAuthor: PropTypes.string.isRequired,
 };

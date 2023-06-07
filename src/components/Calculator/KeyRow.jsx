@@ -5,10 +5,11 @@ const KeyRow = (props) => {
   const { buttons, onClickSetCalculation, calculation } = props;
   const keys = buttons.map((btn) => (
     <KeyBtn
-      button={btn}
       key={btn.id}
       onClickSetCalculation={onClickSetCalculation}
       calculation={calculation}
+      value={btn.value}
+      category={btn.category}
     />
   ));
 

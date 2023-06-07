@@ -1,33 +1,13 @@
 import {
   useState, useEffect, Suspense, lazy,
 } from 'react';
-import { handleGETAPI } from 'lib/GetAPI';
-
-const url = 'https://api.api-ninjas.com/v1/quotes?category=intelligence&limit=1';
-const key = {
-  name: 'X-Api-Key',
-  value: process.env.REACT_APP_API_NINJA,
-};
-const error = {
-  quote: 'The greatest teacher, failure is',
-  author: 'Yoda',
-  category: 'Error: unable to fetch data',
-};
+import { fetchData, key, url } from 'lib/fetchNinjaAPI';
 
 function Loading() {
   return <p>🌀Loading...</p>;
 }
 
 const QuoteList = lazy(() => import('./QuoteList'));
-
-const fetchData = async (url, key, signal, controller, cb) => {
-  let res = await handleGETAPI(url, key, signal);
-  if (res instanceof Error) res = [error];
-  cb(res);
-  return () => {
-    controller.abort();
-  };
-};
 
 const QuotesApp = () => {
   const [data, setData] = useState([]);
