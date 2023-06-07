@@ -18,7 +18,7 @@ KeyBtn.propTypes = {
   button: PropTypes.shape({
     category: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
-    row: PropTypes.number.isRequired,
+    row: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
   }).isRequired,
   onClickSetCalculation: PropTypes.func.isRequired,

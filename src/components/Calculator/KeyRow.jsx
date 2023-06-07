@@ -22,7 +22,7 @@ KeyRow.propTypes = {
     category: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     row: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
   })).isRequired,
   onClickSetCalculation: PropTypes.func.isRequired,
   calculation: PropTypes.shape({
