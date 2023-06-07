@@ -9,21 +9,21 @@ describe('should render Navbar Correctly', () => {
     </BrowserRouter>
   );
 
-  test('should renter home option', () => {
+  test('should render home option', () => {
     render(<MockNavbar />);
     const navLinkElement = screen.getByText(/home/i);
 
     expect(navLinkElement).toBeInTheDocument();
   });
 
-  test('should renter home option', () => {
+  test('should render home option', () => {
     render(<MockNavbar />);
     const navLinkElement = screen.getByText(/quotes/i);
 
     expect(navLinkElement).toBeInTheDocument();
   });
 
-  test('should renter home option', () => {
+  test('should render home option', () => {
     render(<MockNavbar />);
     const navLinkElement = screen.getByText(/calculator/i);
 
