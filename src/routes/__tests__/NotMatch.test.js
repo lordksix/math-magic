@@ -4,5 +4,6 @@ import NotMatch from 'routes/NotMatch';
 test('Should render message not found', async () => {
   render(<NotMatch />);
   const message = screen.getByText(/Not found!/i);
+
   expect(message).toBeInTheDocument();
 });
