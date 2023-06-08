@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { rest } from 'msw';
 
 const item1 = { category: 'catcat', quote: 'Once', author: 'Sophie' };
