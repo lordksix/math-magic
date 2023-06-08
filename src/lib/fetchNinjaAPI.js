@@ -1,6 +1,11 @@
 import { handleGETAPI } from './GetAPI';
 
-const url = 'https://api.api-ninjas.com/v1/quotes?category=intelligence&limit=1';
+const queryParam = new URLSearchParams({
+  category: 'intelligence',
+  limit: '1',
+});
+
+const url = `https://api.api-ninjas.com/v1/quotes?${queryParam}`;
 const key = {
   name: 'X-Api-Key',
   value: process.env.REACT_APP_API_NINJA,

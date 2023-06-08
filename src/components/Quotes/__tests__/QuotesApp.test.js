@@ -1,9 +1,12 @@
-import '@testing-library/jest-dom';
 import { render, screen, waitFor } from '@testing-library/react';
+import server from 'mocks/server';
 import QuotesApp from '../QuotesApp';
 
+beforeAll(() => server.listen());
+afterAll(() => server.close());
+afterEach(() => server.resetHandlers());
+
 test('should render Quotes App', async () => {
-  render(<QuotesApp />);
-  await waitFor(() => expect(screen.getByText(/by/i)).toBeInTheDocument(), { timeout: 2000 });
-  screen.debug();
+  await render(<QuotesApp />);
+  await waitFor(() => expect(screen.getAllByText(/by/i).length).toBe(3));
 });
