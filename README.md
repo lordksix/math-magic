@@ -59,6 +59,8 @@
 - **Implemente React Router Calculator**
 - **Add Calculator Logic**
 - **Add API Interactivity**
+- **Add API mocking**
+- **Add unit tests**
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -168,7 +170,7 @@ Launches the test runner in the interactive watch mode.
 
 ### Deployment
 
-This project is deployed using [GitHub Pages](https://pages.github.com/). 
+This project is deployed using [Vercel](https://vercel.com/). 
 
 Go to [🚀 Live Demo](#live-demo) to check it out.
 
@@ -186,7 +188,7 @@ Go to [🚀 Live Demo](#live-demo) to check it out.
 ## 🔭 Future Features <a name="future-features"></a>
 
 Future changes:
-- Add Tests
+- TBA
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
