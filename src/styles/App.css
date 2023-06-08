@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  padding: 1vh 1vw;
+  width: 98vw;
+  min-height: 98vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.appHeader,
+.appBody,
+.home {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 20px;
+  width: 90vw;
+  max-width: 620px;
+}
+
+.top {
+  align-self: flex-start;
+}
+
+.active {
+  color: red;
+}
+
+/* Calculator */
+
+.calculator-wrapper {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+  min-width: 150px;
+  max-width: 300px;
+  border: 0.5px solid black;
+}
+
+.screen-calc {
+  text-align: right;
+  padding: 10px 0;
+  background-color: rgb(101, 101, 101);
+  color: white;
+  font-size: 1.15rem;
+}
+
+.keyrow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.double {
+  grid-column: 1 / span 2;
+}
+
+.keybtn {
+  text-align: center;
+  vertical-align: middle;
+  padding: 7px 10px;
+  border: 0.5px solid burlywood;
+}
+
+.keyrow:nth-child(2) .keybtn {
+  border-top: none;
+}
+
+.keyrow .keybtn:first-child {
+  border-left: none;
+}
+
+.keyrow .keybtn:last-child {
+  border-right: none;
+}
+
+.keyrow:last-child .keybtn {
+  border-bottom: none;
+}
+
+.number {
+  background-color: lightgray;
+}
+
+.operation {
+  background-color: orange;
+}
+
+/* quotes */
+
+.quotes-wrapper {
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+.error {
+  color: red;
+}
+
+@media only  screen and (min-width: 420px) {
+  .appHeader {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .appBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    column-gap: 20px;
+  }
+}

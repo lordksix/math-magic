@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import 'styles/App.css';
+import Layout from 'components/Layout';
+import Home from 'routes/Home';
+import Calculator from 'routes/Calculator';
+import Quotes from 'routes/Quotes';
+import NotMatch from 'routes/NotMatch';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="calculator" element={<Calculator />} />
+          <Route path="quotes" element={<Quotes />} />
+          <Route path="*" element={<NotMatch />} />
+        </Route>
+      </Routes>
+    </main>
   );
 }
 
