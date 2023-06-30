@@ -7,6 +7,6 @@ afterAll(() => server.close());
 afterEach(() => server.resetHandlers());
 
 test('should render Quotes App', async () => {
-  await render(<QuotesApp />);
+  render(<QuotesApp />);
   await waitFor(() => expect(screen.getAllByText(/by/i).length).toBe(3));
 });
